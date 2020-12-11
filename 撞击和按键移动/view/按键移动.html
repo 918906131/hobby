@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            left: 400px;
+            top: 100px;
+            position: absolute;
+            background-color: greenyellow;
+            border-radius: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+<script src="../static/jquery-3.5.1.min.js"></script>
+<script>
+    var oDiv = document.querySelector("div");
+    document.addEventListener("keydown", function(event) {
+        if (event.keyCode == 37) {
+            oDiv.style.left = oDiv.offsetLeft - 10 + 'px';
+        }
+        if (event.which == 38) {
+            oDiv.style.top = oDiv.offsetTop - 10 + 'px';
+        }
+        if (event.which == 39) {
+            oDiv.style.left = oDiv.offsetLeft + 10 + 'px';
+        }
+        if (event.which == 40) {
+            oDiv.style.top = oDiv.offsetTop + 10 + 'px';
+        }
+    })
+</script>
+
+</html>
